@@ -1,4 +1,4 @@
- I # BLINK-ERRR
+# BLINK-ERRR  
 *For how long a nice lady will be able to blink her eye on a CR2032 cell?*  
 **Let's see!**
 
