@@ -16,6 +16,7 @@
     (rev 1.0)
     (company "valerio\\\\new (5N44P)")
     (comment 1 github.com/5N44P/blink-errr)
+    (comment 2 "for the licesing and all the other details see:")
   )
 
   (layers

@@ -5,12 +5,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
+Title "BLINK-ERRR"
+Date "2019-03-24"
+Rev "1.0"
+Comp "valerio\\\\new (5N44P)"
+Comment1 "github.com/5N44P/blink-errr"
+Comment2 "for the licesing and all the other details see:"
 Comment3 ""
 Comment4 ""
 $EndDescr
