@@ -21,7 +21,7 @@ _autosave-*
 *.ses
 
 # Exported BOM files
-*.xml
+/hardware/*.xml
 *.csv
 
 # Private
