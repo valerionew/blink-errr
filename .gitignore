@@ -70,7 +70,7 @@ private/
 *.su
 *.idb
 *.pdb
-°.disasm
+*.disasm
 
 # Kernel Module Compile Results
 *.mod*
