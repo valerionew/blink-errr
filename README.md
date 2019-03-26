@@ -9,11 +9,11 @@ _This project may or may not have any sense in the traditional sense of having a
 
 I got intrested in low power microcontroller stuff, and I wanted to do a simple little project to see for how long I could blink an led on a small battery, optimizing as much as I could. The specs i challenged myself to comply with were pretty easy:
 
-- Blink an LED every 3-10 seconds; 
-- The blink should be at least visible outside without direct sunlight; 
-- The blink should be produced by a microcontroller; 
+- Blink an LED every 3-10 seconds;
+- The blink should be at least visible outside without direct sunlight;
+- The blink should be produced by a microcontroller;
 - It should run as long as possible on a single CR2032 (obviously without removing power to the microcontroller);
-- It should be the size and shape of a coin or little more. 
+- It should be the size and shape of a coin or little more.
 
 In this form it remained for a long time just an idea in my drawer, until I found a nice way to express it to a non-technical audience. That was the point where i conceived BLINK-ERRR as we know it.  
 
@@ -28,6 +28,7 @@ The hardware is based around an **ATtiny202**, one of the newest microcontroller
 ![schematic v1.0](img/schematic-v1.0-01.png)
 
 ## Firmware
-I'm using MPLAB X with thr AVR GCC toolchain 
+I'm using MPLAB X with the AVR GCC toolchain.
+
 
 ### chiedete a vb che io non lo so
