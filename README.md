@@ -15,6 +15,7 @@ I got intrested in low power microcontroller stuff, and I wanted to do a simple 
 - It should run as long as possible on a single CR2032 (obviously without removing power to the microcontroller);
 - It should be the size and shape of a coin or little more.
 
+
 In this form it remained for a long time just an idea in my drawer, until I found a nice way to express it to a non-technical audience. That was the point where i conceived BLINK-ERRR as we know it.  
 
 ## Artwork
