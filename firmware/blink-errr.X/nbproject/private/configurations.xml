@@ -4,7 +4,7 @@
   <defaultConf>0</defaultConf>
   <confs>
     <conf name="default" type="2">
-      <platformToolSN>platform-tool-sn</platformToolSN>
+      <platformToolSN></platformToolSN>
       <languageToolchainDir>C:\Program Files (x86)\Microchip\avr-gcc\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>

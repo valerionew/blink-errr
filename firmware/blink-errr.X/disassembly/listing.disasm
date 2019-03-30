@@ -1,65 +1,7 @@
-Disassembly Listing for blink-errr
-Generated From:
-C:/Users/valer/Documents/blink-arr/blink-errr.X/dist/default/debug/blink-errr.X.debug.elf
-24-mar-2019 21.31.06
+Unable to generate the disassembly listing file. 
+Please make sure that you have built the project with symbol information. 
+1. Open the Project Properties.
+2. Select the "Loading" node under "Conf: [your current configuration]".
+3. Check "Load Symbols when Programming or building for production".
 
----  C:/Users/valer/Documents/blink-arr/blink-errr.X/main.c  --------------------------------------------
-1:             /* 
-2:              * File:   main.c
-3:              * Author: valer
-4:              *
-5:              * Created on 24 marzo 2019, 21.15
-6:              */
-7:             
-8:             #include <stdio.h>
-9:             #include <stdlib.h>
-10:            #include<avr/cpufunc.h>
-11:            
-12:            /*
-13:             * 
-14:             */
-15:            int main(int argc, char** argv) {
-16:                
-17:            
-18:                return (-1);
-19:            }
-0023  EF8F     LDI R24, 0xFF
-0024  EF9F     LDI R25, 0xFF
-0025  9508     RET
-20:            
----  ./././././crt1/gcrt1.S  ----------------------------------------------------------------------------
-0000  C019     RJMP __trampolines_start
-0001  C020     RJMP __bad_interrupt
-0002  C01F     RJMP __bad_interrupt
-0003  C01E     RJMP __bad_interrupt
-0004  C01D     RJMP __bad_interrupt
-0005  C01C     RJMP __bad_interrupt
-0006  C01B     RJMP __bad_interrupt
-0007  C01A     RJMP __bad_interrupt
-0008  C019     RJMP __bad_interrupt
-0009  C018     RJMP __bad_interrupt
-000A  C017     RJMP __bad_interrupt
-000B  C016     RJMP __bad_interrupt
-000C  C015     RJMP __bad_interrupt
-000D  C014     RJMP __bad_interrupt
-000E  C013     RJMP __bad_interrupt
-000F  C012     RJMP __bad_interrupt
-0010  C011     RJMP __bad_interrupt
-0011  C010     RJMP __bad_interrupt
-0012  C00F     RJMP __bad_interrupt
-0013  C00E     RJMP __bad_interrupt
-0014  C00D     RJMP __bad_interrupt
-0015  C00C     RJMP __bad_interrupt
-0016  C00B     RJMP __bad_interrupt
-0017  C00A     RJMP __bad_interrupt
-0018  C009     RJMP __bad_interrupt
-0019  C008     RJMP __bad_interrupt
-0022  CFDD     RJMP __eeprom_end
-001A  2411     EOR R1, R1
-001B  BE1F     OUT 0x3F, R1
-001C  EFCF     LDI R28, 0xFF
-001D  BFCD     OUT 0x3D, R28
-001E  E3DF     LDI R29, 0x3F
-001F  BFDE     OUT 0x3E, R29
-0020  D002     RCALL main
-0021  C004     RJMP _exit
+Double click on this editor pane to set.

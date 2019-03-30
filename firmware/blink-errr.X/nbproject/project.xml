@@ -4,11 +4,11 @@
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
             <name>blink-errr</name>
-            <creation-uuid>cb13a85d-fecd-4bfa-9519-dbb3a6392a0c</creation-uuid>
+            <creation-uuid>214081b9-3080-48ca-8e85-bb01dffb70fb</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions/>
+            <header-extensions>h</header-extensions>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
