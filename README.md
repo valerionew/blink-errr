@@ -29,7 +29,30 @@ The hardware is based around an **ATtiny202**, one of the newest microcontroller
 ![schematic v1.0](img/schematic-v1.0-01.png)
 
 ## Firmware
-I'm using MPLAB X with the AVR GCC toolchain.
 
+### Toolchain and environment setup
+I'm using MPLAB X with the AVR GCC toolchain installed.  
+Installing the toolchain might be trivial if you have experience with MPLAB X, if not just follow these steps (for Windows):
+- Download the avr GCC toolchain from Microchip [here](https://www.microchip.com/mplab/avr-support/avr-and-arm-toolchains-c-compilers).
+- Extract the toolchain to a know path in your system. I've used `C:\Program Files (x86)\Microchip\avr-gcc`
+- Open MPLAB X and go to Tools -> Options -> Embedded -> Build Tools -> Add...
+- Select **the bin folder** in your avr-gcc folder.  
+
+Now your toolchain should be set up.
+
+### Firmware uploading
+#### Programmers
+The ATtiny202 uses the new UPDI inteface, for which i didn't have any programmer. There are a lot of options:
+- **[jtag2updi](https://github.com/ElTangas/jtag2updi) (DIY / Arduino based)**: this is the DIY solution, you can upload this code to an Arduino Uno and use it as a programmer. This is the approach i've used. I'm not sure if this interface can be used for hardware debugging.
+- **[MPLAB Snap](https://www.microchip.com/developmenttools/ProductDetails/PartNO/PG164100) (Cheapest official programmer)**: This is a new line of very cheap programmers by Microchip. It is very cheap but, beeing new, it has not a lot of support yet. There's little or no support for debugging.
+- **[Atmel-ICE](https://www.microchip.com/DevelopmentTools/ProductDetails/ATATMEL-ICE) (Programmer and debugger)**: This is the traditional AVR programmer from Atmel. It's the most expensive in this list (about 120€), but it is also an hardware debugger.
+- **[PICKit4](https://www.microchip.com/developmenttools/ProductDetails/PG164140) (Most universal)**: Probably the most universal programmer of all of these. It supports both AVR and PICS. It would be probably a better choice over the Atmel ICE, but i'm not sure of the PICKit hardware debug capabilities.
+#### Uploading with jtag2updi and avrdude
+As stated above, i've used the jtag2updi solution. The Author has provided a modified `avrdude.conf` file that can be passed to avrdude to add the support for the programmer and the UPDI compatible targets.  
+
+I've uploaded it to an Arduino Uno using the Arduino IDE.
+Contrary to what the author states, in my case **there was no need to cut or disable the auto-reset feature**, it works fine as is. I've connected the target to pin 6 of the Arduino and powered it with 5V from the Arduino board. The target mcu is connected to the arduino through three cables soldered directly on the pins going into the Arduino headers.  
+
+I've used avrdude in the form of [AVRDUDESS](http://blog.zakkemble.net/avrdudess-a-gui-for-avrdude/) by Zak Kemble, a GUI for avrdude. You need to install it and replace the `avrdude.conf` file in the installation folder with the one found in the jtag2updi repo.
 
 ### chiedete a vb che io non lo so
