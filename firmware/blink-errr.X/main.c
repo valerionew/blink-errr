@@ -9,37 +9,54 @@
  *
  *
  */
-#include <stdio.h>
-#include <stdlib.h>
-#include <avr/cpufunc.h> // _NOP()
+
+#define LED_PIN (1 << 1)
+
+#ifndef F_CPU
+#  define F_CPU   1000UL
+#endif
+
 #include <avr/io.h>
+#include <util/delay.h>
+#include "settings.h"
 
 
 int main(int argc, char** argv) {
+    PORTA.DIR = LED_PIN; 
 
     my_system_init();
-
-    while(1){
-
-
-
-    }
+    PORTA.OUTSET = LED_PIN;
+    PORTA.OUTCLR = LED_PIN;
+    sleep();
+    
+   
+    
     return (0);
 }
 
 
 void my_system_init(){
-  FUSE.BODCFG = 0; // disable brownout detection (system will go below 1.8v)
-  // OCSCFG should be set? uC should run on the 32kHz oscillator
   set_clock_32k();
-
+  watchdog_enable();
     }
 
 void set_clock_32k(){
   uint8_t savedsreg = SREG; // save the status register with the interrupt enable flags
-  cli(); // disable all interrupts
+  asm("CLI"); // disable all interrupts
   CCP = 0xD8;   // set CCP for modifying clock selection register
-  CLKCTRL.MCLKCTRLA = 0x1; // set the main clock to OSCULP32K
-  CLKCTRL.MCLKCTRLB = 0; // disable prescaler
+  CLKCTRL.MCLKCTRLA = 0x01; // set the main clock to OSCULP32K        
+  CCP = 0xD8;
+  CLKCTRL.MCLKCTRLB = (0x04<<1) | 1; // set prescaler to 
   SREG = savedsreg; // restore the SREG (re-enable the interrupts)
+    
+}
+
+void watchdog_enable(){
+     CCP = 0xD8; // sign change
+     WDT.CTRLA = 0x0B; // watchdog 4 seconds
+}
+
+void sleep(){
+    SLPCTRL.CTRLA = 0x03;
+    asm("SLEEP");
 }
