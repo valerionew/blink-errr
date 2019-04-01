@@ -10,45 +10,42 @@
  *
  */
 
-#define LED_PIN (1 << 1)
+#define LED_PIN (1 << 1) // define led pin as the port mask for the pin
 
 #ifndef F_CPU
-#  define F_CPU   1000UL
+#  define F_CPU   1000UL  // for delay function
 #endif
 
-#include <avr/io.h>
-#include <util/delay.h>
-#include "settings.h"
+#include <avr/io.h> // register definitions
+#include "settings.h" // header file for the functions of the program
 
 
 int main(int argc, char** argv) {
-    PORTA.DIR = LED_PIN; 
+    PORTA.DIR = LED_PIN; // set the led as output
 
-    my_system_init();
-    PORTA.OUTSET = LED_PIN;
-    PORTA.OUTCLR = LED_PIN;
-    sleep();
-    
-   
-    
+    my_system_init(); // initialize the system: set the clock and enable the watchdog
+    PORTA.OUTSET = LED_PIN; // light the LED
+    PORTA.OUTCLR = LED_PIN; // turn off the LED
+    sleep(); // go to sleep
+
     return (0);
 }
 
 
 void my_system_init(){
-  set_clock_32k();
-  watchdog_enable();
-    }
+  set_clock_32k(); // set the clock to the 32k ULP oscillator with the defined prescaler
+  watchdog_enable(); // enable the watchdog
+}
 
 void set_clock_32k(){
   uint8_t savedsreg = SREG; // save the status register with the interrupt enable flags
   asm("CLI"); // disable all interrupts
-  CCP = 0xD8;   // set CCP for modifying clock selection register
-  CLKCTRL.MCLKCTRLA = 0x01; // set the main clock to OSCULP32K        
-  CCP = 0xD8;
-  CLKCTRL.MCLKCTRLB = (0x04<<1) | 1; // set prescaler to 
+  CCP = 0xD8;   // sign CCP for modifying clock selection register
+  CLKCTRL.MCLKCTRLA = 0x01; // set the main clock to OSCULP32K
+  CCP = 0xD8; // sign CCP for modifying clock prescaler register
+  CLKCTRL.MCLKCTRLB = (0x04<<1) | 1; // set prescaler to
   SREG = savedsreg; // restore the SREG (re-enable the interrupts)
-    
+
 }
 
 void watchdog_enable(){
@@ -57,6 +54,6 @@ void watchdog_enable(){
 }
 
 void sleep(){
-    SLPCTRL.CTRLA = 0x03;
-    asm("SLEEP");
+    SLPCTRL.CTRLA = 0x03; // set the sleep to power down, enable the sleep
+    asm("SLEEP"); // pass the SLEEP instruction to the CPU
 }
