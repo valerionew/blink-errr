@@ -20,7 +20,7 @@
 #include "settings.h" // header file for the functions of the program
 
 
-int main(int argc, char** argv) {
+int main() {
     PORTA.DIR = LED_PIN; // set the led as output
 
     my_system_init(); // initialize the system: set the clock and enable the watchdog

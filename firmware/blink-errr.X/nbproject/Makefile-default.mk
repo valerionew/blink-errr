@@ -109,14 +109,14 @@ ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
-	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=attiny202  -I "C:\Program Files (x86)\Microchip\MPLABX\v5.15\packs\Microchip\ATtiny_DFP\2.0.2\include"  -B "C:\Program Files (x86)\Microchip\MPLABX\v5.15\packs\Microchip\ATtiny_DFP\2.0.2\gcc\dev\attiny202" -g -DDEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -Os -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o  -o ${OBJECTDIR}/main.o main.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=attiny202  -I "C:\Program Files (x86)\Microchip\MPLABX\v5.15\packs\Microchip\ATtiny_DFP\2.0.2\include"  -B "C:\Program Files (x86)\Microchip\MPLABX\v5.15\packs\Microchip\ATtiny_DFP\2.0.2\gcc\dev\attiny202" -g -DDEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O3 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -Wextra -Wundef -pedantic -pedantic-errors -v -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o  -o ${OBJECTDIR}/main.o main.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 else
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
-	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=attiny202  -I "C:\Program Files (x86)\Microchip\MPLABX\v5.15\packs\Microchip\ATtiny_DFP\2.0.2\include"  -B "C:\Program Files (x86)\Microchip\MPLABX\v5.15\packs\Microchip\ATtiny_DFP\2.0.2\gcc\dev\attiny202"  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -Os -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o  -o ${OBJECTDIR}/main.o main.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=attiny202  -I "C:\Program Files (x86)\Microchip\MPLABX\v5.15\packs\Microchip\ATtiny_DFP\2.0.2\include"  -B "C:\Program Files (x86)\Microchip\MPLABX\v5.15\packs\Microchip\ATtiny_DFP\2.0.2\gcc\dev\attiny202"  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O3 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -Wextra -Wundef -pedantic -pedantic-errors -v -MD -MP -MF "${OBJECTDIR}/main.o.d" -MT "${OBJECTDIR}/main.o.d" -MT ${OBJECTDIR}/main.o  -o ${OBJECTDIR}/main.o main.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 endif
 
