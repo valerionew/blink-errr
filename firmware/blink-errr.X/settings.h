@@ -28,4 +28,5 @@ extern "C" {
 void my_system_init();
 void set_clock_32k();
 void watchdog_enable();
+void pit_enable();
 void sleep();
