@@ -111,7 +111,9 @@ This is the **only other wake-up source from power down mode**, and it's likely 
 On older AVRs it was done as in my v1.0, with the difference that the watchdog could just generate an interrupt instead of resetting the whole chip. In newer AVRs the watchdog interrupt functionality was probably deprecated by **the introduction of the RTC peripheral with its PIT capability**.
 
 For reference, this is the current consumption for every cycle (with a 1kohm shunt), with the v1.0 waveform in blue and the v1.1 waveform in yellow:
+
 ![current comparison with 1kohm shunt](img/PIT-vs-WDR-1kohm-shunt.png)
+
 The tall and skinny spike is the actual code exectuion and blink, and **the blue big rectangle is the extra consumption from the reset**.
 
 *The v1.1 seems to consume a lot more in sleep, but according to my measures in DC it looks like this is not the case, and it's just a weird artifact of the waveform save function of my oscilloscope*
