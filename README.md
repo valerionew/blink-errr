@@ -119,7 +119,8 @@ The tall and skinny spike is the actual code exectuion and blink, and **the blue
 ## Battery life expectancy
 From my measures the blink phase consumes 1mA and lasts about 12ms. This phase is followed by the sleep phase consumption, lasting about 8s, with the consumption varying upon battery voltage: 2uA at highest voltage, dropping to 0.7uA at the lowest voltage. Making a conservative estimation, we can say it is always 2uA.
 
-![current-time-areas](img/current-areas.png)
+![current-time-areas](img/current-areas.png)  
+
 We can say that we want to transform the red area in the picture, into the blue one, to get the average consumption per period *T*, which coincides con the average consumption per unit of time, because it's constant.   
 The red area is 1mA * 12ms = **12uC** (the result is in coulomb because 1A = 1C/1s). We can now obtain the height of the blue area: 12uC/8s = **1.5uA**.  
 So, **the equivalent current draw is 3.5uA**.
