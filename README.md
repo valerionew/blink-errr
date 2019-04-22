@@ -16,6 +16,7 @@
 	- [Firmware working and internals](#firmware-working-and-internals)
 		- [v1.0](#v10)
 		- [v1.1](#v11)
+- [Battery life expectancy](#battery-life-expectancy)
 
 <!-- /TOC -->
 
@@ -114,3 +115,13 @@ For reference, this is the current consumption for every cycle (with a 1kohm shu
 The tall and skinny spike is the actual code exectuion and blink, and **the blue big rectangle is the extra consumption from the reset**.
 
 *The v1.1 seems to consume a lot more in sleep, but according to my measures in DC it looks like this is not the case, and it's just a weird artifact of the waveform save function of my oscilloscope*
+
+## Battery life expectancy
+From my measures the blink phase consumes 1mA and lasts about 12ms. This phase is followed by the sleep phase consumption, lasting about 8s, with the consumption varying upon battery voltage: 2uA at highest voltage, dropping to 0.7uA at the lowest voltage. Making a conservative estimation, we can say it is always 2uA.
+
+![current-time-areas](img/current-areas.png)
+We can say that we want to transform the red area in the picture, into the blue one, to get the average consumption per period *T*, which coincides con the average consumption per unit of time, because it's constant.   
+The red area is 1mA * 12ms = **12uC** (the result is in coulomb because 1A = 1C/1s). We can now obtain the height of the blue area: 12uC/8s = **1.5uA**.  
+So, **the equivalent current draw is 3.5uA**.
+
+**For a 200mA CR2032, we can expect the system to run for about 6 years, with this figure beeing a conservative estimate**. Realistically, we won't expect it to run any longer, because of component aging and the battery getting close to the end of it's shelf life.
