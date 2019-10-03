@@ -21,7 +21,7 @@
 <!-- /TOC -->
 
 ## Purpose of the project
-_This project may or may not have any sense in the traditional sense of having a sense._ The project is the product of some sperimentation that lay between a **purely technical challenge** and **an artistic dimension**.
+_This project may or may not have any sense in the traditional sense of having a sense._ The project is the product of some experimentation that lay between a **purely technical challenge** and **an artistic dimension**.
 
 I got intrested in low power microcontroller stuff, and I wanted to do a simple little project to see for how long I could blink an led on a small battery, optimizing as much as I could. The specs i challenged myself to comply with were pretty easy:
 
