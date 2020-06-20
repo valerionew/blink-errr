@@ -1,8 +1,8 @@
 /*
  *
- * Project: BLINK-ERRR (github.com/5N44P/blink-errr)
+ * Project: BLINK-ERRR (github.com/valerionew/blink-errr)
  * File:   settings.h
- * Author: valerio\new (github.com/5N44P)
+ * Author: valerio\new (github.com/valerionew)
  *
  * Created on 24 march 2019, 21.15
  *
